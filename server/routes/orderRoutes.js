@@ -61,21 +61,24 @@ router.post("/", verifyToken, async (req, res) => {
         const invoicePath = await generateInvoice(savedOrder, user);
 
         // CUSTOMER MAIL
-        await sendEmail({
-          to: user.email,
-          subject: "Your FurniLux Order Invoice",
-          html: `
-            <h3>Order Confirmed</h3>
-            <p>Order ID: ${savedOrder._id}</p>
-            <p>Total: ₹${savedOrder.totalAmount}</p>
-          `,
-          attachments: [
-            {
-              filename: `invoice-${savedOrder._id}.pdf`,
-              path: invoicePath,
-            },
-          ],
-        });
+       // CUSTOMER MAIL
+if (savedOrder.email) {
+  await sendEmail({
+    to: savedOrder.email,
+    subject: "Your FurniLux Order Invoice",
+    html: `
+      <h3>Order Confirmed</h3>
+      <p>Order ID: ${savedOrder._id}</p>
+      <p>Total: ₹${savedOrder.totalAmount}</p>
+    `,
+    attachments: [
+      {
+        filename: `invoice-${savedOrder._id}.pdf`,
+        path: invoicePath,
+      },
+    ],
+  });
+}
 
         // ADMIN MAIL
         await sendEmail({
