@@ -1,0 +1,76 @@
+.img-slider {
+  position: relative;
+  width: 100%;
+}
+
+.img-slider img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+/* ARROWS */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.6);
+  color: white;
+  border: none;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow.left {
+  left: 10px;
+}
+
+.arrow.right {
+  right: 10px;
+}
+
+
+
+/*responsive k liye*/
+
+/* ===== SAFE RESPONSIVE FOR PRODUCT CARD (ADD ONLY) ===== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .img-slider img {
+    height: 220px; /* thoda chhota */
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .img-slider img {
+    height: 200px;
+  }
+
+  .arrow {
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .img-slider img {
+    height: 180px;
+  }
+
+  .arrow {
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,70 @@
+
+
+/*responsive*/
+
+
+.myorders-container {
+  padding: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.order-card {
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 8px;
+  background: white;
+}
+
+.cancel-btn {
+  background: crimson;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.cancel-btn:hover {
+  opacity: 0.8;
+}
+
+/* =========================
+   RESPONSIVE (SAFE ADD ONLY)
+   ========================= */
+
+/* Tablet */
+@media (max-width: 768px) {
+  .myorders-container {
+    padding: 24px;
+  }
+
+  .order-card {
+    padding: 14px;
+  }
+
+  .cancel-btn {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .myorders-container {
+    padding: 16px;
+  }
+
+  .order-card {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .cancel-btn {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+  }
+}

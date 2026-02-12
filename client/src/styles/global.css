@@ -1,0 +1,26 @@
+/* ===== GLOBAL RESET ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== BASE HTML ===== */
+html {
+  font-size: 16px;
+}
+
+/* ===== BODY ===== */
+body {
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+/* ===== RESPONSIVE IMAGES ===== */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}

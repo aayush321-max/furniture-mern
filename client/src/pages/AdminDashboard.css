@@ -1,0 +1,92 @@
+.admin-dashboard {
+  min-height: 80vh;
+  text-align: center;
+  padding: 40px;
+}
+
+/* IMPORTANT */
+.admin-dashboard .admin-buttons {
+  margin-top: 30px;
+}
+
+.admin-dashboard .admin-buttons button {
+  margin: 10px;
+  padding: 12px 20px;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.admin-dashboard .logout-btn {
+  margin-top: 40px;
+  padding: 10px 20px;
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 6px;
+}
+/* ==============================
+   ADMIN DASHBOARD RESPONSIVE
+   (SAFE – UI SAME RAHEGA)
+   ============================== */
+
+/* Tablet screens */
+@media (max-width: 1024px) {
+  .admin-dashboard {
+    padding: 30px 25px;
+  }
+
+  .admin-dashboard .admin-buttons button {
+    font-size: 15px;
+    padding: 11px 18px;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 768px) {
+  .admin-dashboard {
+    padding: 25px 20px;
+  }
+
+  .admin-dashboard .admin-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .admin-dashboard .admin-buttons button {
+    width: 100%;
+    max-width: 280px;
+    margin: 8px 0;
+  }
+
+  .admin-dashboard .logout-btn {
+    width: 100%;
+    max-width: 260px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .admin-dashboard {
+    padding: 20px 15px;
+  }
+
+  .admin-dashboard h2,
+  .admin-dashboard h1 {
+    font-size: 22px;
+  }
+
+  .admin-dashboard .admin-buttons button {
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+
+  .admin-dashboard .logout-btn {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+}

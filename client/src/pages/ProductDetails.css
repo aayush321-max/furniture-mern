@@ -1,0 +1,188 @@
+.details {
+  display: flex;
+  gap: 50px;
+  padding: 80px;
+  background: #f9f9f9;
+}
+
+.details img {
+  width: 45%;
+  border-radius: 12px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.details-info {
+  max-width: 450px;
+}
+
+.details-info h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.details-info h3 {
+  color: #444;
+  margin-bottom: 15px;
+}                                     
+
+.details-info p {
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.details-info button {
+  padding: 12px 30px;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+.slider {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.slider button {
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+
+/*res*/
+/* =========================
+   PRODUCT DETAILS RESPONSIVE
+   (ADD ONLY – SAFE)
+   ========================= */
+
+/* Laptop & small desktop */
+@media (max-width: 1200px) {
+  .details {
+    padding: 60px 40px;
+    gap: 40px;
+  }
+
+  .details-info h2 {
+    font-size: 28px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .details {
+    flex-direction: column;
+    padding: 50px 30px;
+    gap: 35px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .details img {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .details-info {
+    max-width: 100%;
+  }
+
+  .details-info h2 {
+    font-size: 26px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .details {
+    padding: 40px 18px;
+  }
+
+  .details img {
+    max-width: 100%;
+  }
+
+  .details-info h2 {
+    font-size: 22px;
+  }
+
+  .details-info p {
+    font-size: 14px;
+  }
+
+  .details-info button {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .slider {
+    justify-content: center;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 420px) {
+  .details {
+    padding: 30px 14px;
+  }
+
+  .details-info h2 {
+    font-size: 20px;
+  }
+}
+/* =========================
+   PRODUCT DETAILS FIX
+   (NO UI BREAK)
+   ========================= */
+
+.details {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Image / slider never exceed screen */
+.details img,
+.slider {
+  max-width: 100%;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .details {
+    flex-direction: column;
+    padding: 40px 20px;
+    gap: 30px;
+    align-items: center;
+  }
+
+  .details img {
+    width: 100%;
+    max-width: 500px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .details {
+    padding: 30px 15px;
+  }
+
+  .details img {
+    width: 100%;
+  }
+
+  .slider {
+    width: 100%;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 420px) {
+  .details {
+    padding: 25px 12px;
+  }
+}

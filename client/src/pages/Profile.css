@@ -1,0 +1,27 @@
+.profile {
+  padding: 40px;
+}
+
+.profile-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.order-card {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+.profile button {
+margin-top: 20px;
+          padding: 12px 22px;
+          background: black;
+          color: white;
+          border: none;
+          border-radius: 8px;
+          cursor: pointer;
+          font-size: 16px;
+}

@@ -1,0 +1,92 @@
+.manage-products {
+  min-height: calc(100vh - 140px); /* ✅ FIXED */
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+/* GRID */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* CARD */
+.product-card {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  background: white;
+}
+
+/* TITLE */
+.product-card h4 {
+  margin-bottom: 10px;
+}
+
+/* DELETE BUTTON */
+.delete-btn {
+  background: crimson;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* PAGE HEADING (AS IS) */
+h2 {
+  color: red;
+  font-size: 40px;
+}
+
+/* =========================
+   RESPONSIVE (ADD ONLY)
+   ========================= */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .manage-products {
+    padding: 30px;
+  }
+
+  h2 {
+    font-size: 34px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .manage-products {
+    padding: 20px;
+  }
+
+  .products-grid {
+    gap: 16px;
+  }
+
+  h2 {
+    font-size: 28px;
+    text-align: center;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .manage-products {
+    padding: 16px;
+  }
+
+  .product-card {
+    padding: 16px;
+  }
+
+  .delete-btn {
+    width: 100%;
+    padding: 10px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+}

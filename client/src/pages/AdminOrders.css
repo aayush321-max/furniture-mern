@@ -1,0 +1,121 @@
+.admin-orders-container {
+  padding: 40px;
+}
+
+.order-card {
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  background: #fafafa;
+}
+
+/* ===== STATUS COLORS ===== */
+.status-processing {
+  color: orange;
+  font-weight: bold;
+}
+
+.status-shipped {
+  color: blue;
+  font-weight: bold;
+}
+
+.status-delivered {
+  color: green;
+  font-weight: bold;
+}
+
+.status-cancelled {
+  color: red;
+  font-weight: bold;
+}
+
+/* ===== BUTTONS ===== */
+.admin-btn-group button {
+  margin-right: 10px;
+  margin-top: 8px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: white;
+}
+
+.processing-btn {
+  background-color: orange;
+}
+
+.shipped-btn {
+  background-color: #007bff;
+}
+
+.delivered-btn {
+  background-color: green;
+}
+
+.cancel-btn {
+  background-color: red;
+}
+/* ==============================
+   ADMIN ORDERS RESPONSIVE
+   (SAFE – UI SAME RAHEGA)
+   ============================== */
+
+/* Tablet screens */
+@media (max-width: 1024px) {
+  .admin-orders-container {
+    padding: 30px 25px;
+  }
+
+  .order-card {
+    padding: 14px;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 768px) {
+  .admin-orders-container {
+    padding: 25px 20px;
+  }
+
+  .order-card {
+    padding: 14px;
+  }
+
+  /* Buttons stack nicely */
+  .admin-btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+  }
+
+  .admin-btn-group button {
+    flex: 1 1 auto;
+    min-width: 120px;
+    margin-right: 0;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .admin-orders-container {
+    padding: 20px 15px;
+  }
+
+  .order-card {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .admin-btn-group {
+    flex-direction: column;
+  }
+
+  .admin-btn-group button {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+  }
+}

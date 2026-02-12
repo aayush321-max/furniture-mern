@@ -1,0 +1,214 @@
+.home {
+  position: relative;
+  min-height: 100vh;
+  background-image: url("https://images.unsplash.com/photo-1615874959474-d609969a20ed");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+
+.home-overlay {
+  position: absolute;
+  inset: 0;              /* top:0 right:0 bottom:0 left:0 */
+  background: rgba(0, 0, 0, 0.55);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* CONTENT */
+.home-content {
+  max-width: 900px;
+  text-align: center;
+  padding: 0 20px;
+  color: #ffffff;
+}
+
+.home-content h1 {
+  font-size: 52px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.home-content h1 span {
+  color: #cbd5f5;
+}
+
+.home-content p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #e5e7eb;
+  margin-bottom: 35px;
+}
+
+/* BUTTONS */
+.home-buttons {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+}
+
+.primary-btn {
+  padding: 14px 34px;
+  background: #ffffff;
+  color: #0f172a;
+  border: none;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.primary-btn:hover {
+  background: #e5e7eb;
+}
+
+.secondary-btn {
+  padding: 14px 34px;
+  background: transparent;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.secondary-btn:hover {
+  background: #ffffff;
+  color: #0f172a;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .home-content h1 {
+    font-size: 36px;
+  }
+
+  .home-content p {
+    font-size: 16px;
+  }
+
+  .home-buttons {
+    flex-direction: column;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===============================
+   SAFE RESPONSIVE (ADD ONLY)
+   =============================== */
+
+/* Large laptops */
+@media (max-width: 1200px) {
+  .home-content {
+    max-width: 800px;
+  }
+
+  .home-content h1 {
+    font-size: 46px;
+  }
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+  .home {
+    height: auto; /* avoid vh cut issue */
+    min-height: calc(100vh - 70px);
+  }
+
+  .home-content h1 {
+    font-size: 40px;
+  }
+
+  .home-content p {
+    font-size: 17px;
+  }
+}
+
+/* Mobile & small tablets */
+@media (max-width: 768px) {
+  .home {
+    min-height: calc(100vh - 60px);
+  }
+
+  .home-content {
+    padding: 0 16px;
+  }
+
+  .home-content h1 {
+    font-size: 34px;
+    line-height: 1.25;
+  }
+
+  .home-content p {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 28px;
+  }
+
+  .home-buttons {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 480px) {
+  .home-content h1 {
+    font-size: 28px;
+  }
+
+  .home-content p {
+    font-size: 14px;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+}
