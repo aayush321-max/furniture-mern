@@ -61,11 +61,11 @@ router.post("/", verifyToken, async (req, res) => {
         const invoicePath = await generateInvoice(savedOrder, user);
 
         // CUSTOMER MAIL
-       // CUSTOMER MAIL
+       
 // CUSTOMER MAIL
-if (savedOrder.email) {
+if (user && user.email) {
   await sendEmail({
-    to: savedOrder.email,
+    to: user.email,
     subject: "Your FurniLux Order Invoice",
     html: `
       <h3>Order Confirmed</h3>
@@ -80,6 +80,7 @@ if (savedOrder.email) {
     ],
   });
 }
+
         // ADMIN MAIL
         await sendEmail({
           to: process.env.ADMIN_EMAIL,
