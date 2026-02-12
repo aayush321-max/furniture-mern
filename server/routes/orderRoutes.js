@@ -62,6 +62,7 @@ router.post("/", verifyToken, async (req, res) => {
 
         // CUSTOMER MAIL
        // CUSTOMER MAIL
+// CUSTOMER MAIL
 if (savedOrder.email) {
   await sendEmail({
     to: savedOrder.email,
@@ -79,7 +80,6 @@ if (savedOrder.email) {
     ],
   });
 }
-
         // ADMIN MAIL
         await sendEmail({
           to: process.env.ADMIN_EMAIL,
