@@ -13,7 +13,7 @@ function AdminOrders() {
     try {
       const token = localStorage.getItem("token");
 
-      const res = await fetch("http://localhost:5000/api/orders", {
+      const res = await fetch("https://furniture-mern-tsaf.onrender.com/api/orders", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -45,7 +45,7 @@ function AdminOrders() {
       const token = localStorage.getItem("token");
 
       const res = await fetch(
-        `http://localhost:5000/api/orders/admin/${id}`,
+        `https://furniture-mern-tsaf.onrender.com/api/orders/admin/${id}`,
         {
           method: "PUT",
           headers: {

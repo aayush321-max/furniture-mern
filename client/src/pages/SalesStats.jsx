@@ -12,7 +12,7 @@ function SalesStats() {
   useEffect(() => {
     const token = localStorage.getItem("token");
 
-    fetch("http://localhost:5000/api/orders/stats", {
+    fetch("https://furniture-mern-tsaf.onrender.com/api/orders/stats", {
       headers: {
         Authorization: `Bearer ${token}`,
       },

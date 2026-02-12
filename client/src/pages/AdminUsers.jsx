@@ -26,7 +26,7 @@ function AdminUsers() {
       return;
     }
 
-    fetch("http://localhost:5000/api/auth/admin/user-login-stats", {
+    fetch("https://furniture-mern-tsaf.onrender.com/api/auth/admin/user-login-stats", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

@@ -28,7 +28,7 @@ function Profile() {
 
     try {
       const res = await fetch(
-        "http://localhost:5000/api/auth/update-profile",
+        "https://furniture-mern-tsaf.onrender.com/api/auth/update-profile",
         {
           method: "PUT",
           headers: {

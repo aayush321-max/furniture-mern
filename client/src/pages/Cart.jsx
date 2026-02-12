@@ -17,7 +17,7 @@ function Cart() {
 
   // ---------------- FETCH COUPONS ----------------
   useEffect(() => {
-    fetch("http://localhost:5000/api/coupons")
+    fetch("https://furniture-mern-tsaf.onrender.com/api/coupons")
       .then((res) => res.json())
       .then((data) => setCoupons(data))
       .catch((err) => console.error(err));

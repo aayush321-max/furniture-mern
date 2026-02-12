@@ -115,7 +115,7 @@ function Checkout() {
 
     const saveOrder = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/orders", {
+        const res = await fetch("https://furniture-mern-tsaf.onrender.com/api/orders", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

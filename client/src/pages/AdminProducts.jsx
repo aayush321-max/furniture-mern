@@ -4,7 +4,7 @@ function AdminProducts() {
   const [products, setProducts] = useState([]);
 
   const fetchProducts = () => {
-    fetch("http://localhost:5000/api/products")
+    fetch("https://furniture-mern-tsaf.onrender.com/api/products")
       .then(res => res.json())
       .then(data => setProducts(data));
   };
@@ -14,7 +14,7 @@ function AdminProducts() {
   }, []);
 
   const deleteProduct = async (id) => {
-    await fetch(`http://localhost:5000/api/products/${id}`, {
+    await fetch(`https://furniture-mern-tsaf.onrender.com/api/products/${id}`, {
       method: "DELETE",
     });
     fetchProducts();
