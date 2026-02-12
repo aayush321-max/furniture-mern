@@ -15,11 +15,15 @@ const sendEmail = async ({ to, subject, html, attachments = [] }) => {
 
   const receivers = [{ email: to }];
 
-  // 🔥 Convert attachments to Brevo format
-  const formattedAttachments = attachments.map((file) => ({
-    name: file.filename,
-    content: fs.readFileSync(file.path).toString("base64"),
-  }));
+  let brevoAttachments = [];
+
+  // 🔥 Convert attachments if exist
+  if (attachments.length > 0) {
+    brevoAttachments = attachments.map((file) => ({
+      name: file.filename,
+      content: fs.readFileSync(file.path).toString("base64"),
+    }));
+  }
 
   try {
     await tranEmailApi.sendTransacEmail({
@@ -27,7 +31,7 @@ const sendEmail = async ({ to, subject, html, attachments = [] }) => {
       to: receivers,
       subject,
       htmlContent: html,
-      attachment: formattedAttachments,
+      attachment: brevoAttachments.length > 0 ? brevoAttachments : undefined,
     });
 
     console.log("Email sent successfully to", to);
