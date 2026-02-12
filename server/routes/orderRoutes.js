@@ -63,7 +63,14 @@ router.post("/", verifyToken, async (req, res) => {
         // CUSTOMER MAIL
        
 // CUSTOMER MAIL
+// CUSTOMER MAIL
 if (user && user.email) {
+
+  const invoicePath = await generateInvoice(savedOrder, user);
+
+  console.log("Sending invoice to:", user.email);
+  console.log("Invoice path:", invoicePath);
+
   await sendEmail({
     to: user.email,
     subject: "Your FurniLux Order Invoice",
