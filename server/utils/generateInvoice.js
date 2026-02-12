@@ -121,9 +121,26 @@ const generateInvoice = async (order, user) => {
     align: "center",
   });
 
+ 
+
+
+
+
+
+  return new Promise((resolve, reject) => {
+  const stream = fs.createWriteStream(filePath);
+
+  doc.pipe(stream);
   doc.end();
 
-  return filePath;
+  stream.on("finish", () => {
+    resolve(filePath);
+  });
+
+  stream.on("error", (err) => {
+    reject(err);
+  });
+});
 };
 
 module.exports = generateInvoice;
